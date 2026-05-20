@@ -34,8 +34,8 @@ const IMG = {
     'https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?auto=format&fit=crop&w=900&q=80',
   ],
   gallery: [
-    'https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1601929862217-f1bf94503333?auto=format&fit=crop&w=1200&q=80',
+    'https://image.pollinations.ai/prompt/A%20wrecked%20black%20BMW%20luxury%20sedan%20after%20front-end%20collision%2C%20smashed%20front%20bumper%2C%20crumpled%20hood%2C%20broken%20headlight%20and%20grille%2C%20debris%20on%20ground%2C%20parked%20on%20city%20street%2C%20three-quarter%20front%20view%2C%20photorealistic%2C%20cinematic%20lighting%2C%20detailed%20damage?width=1600&height=900&seed=42&nologo=true',
+    'https://image.pollinations.ai/prompt/A%20black%20BMW%20luxury%20sedan%20fully%20repaired%20and%20pristine%2C%20glossy%20paint%20finish%2C%20parked%20in%20clean%20modern%20auto%20body%20shop%20with%20professional%20lighting%2C%20three-quarter%20front%20view%2C%20photorealistic%2C%20cinematic%2C%20showroom%20quality?width=1600&height=900&seed=42&nologo=true',
     'https://images.pexels.com/photos/32897253/pexels-photo-32897253.jpeg?auto=compress&w=1200',
     'https://images.pexels.com/photos/30893737/pexels-photo-30893737.jpeg?auto=compress&w=1200',
   ],
