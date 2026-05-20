@@ -1032,7 +1032,7 @@ function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex gap-2"><MapPin className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> 2418 S Seneca St, Wichita, KS 67213</li>
               <li className="flex gap-2"><Phone className="w-4 h-4 text-red-500" /> (316) 555-0142</li>
-              <li className="flex gap-2"><Mail className="w-4 h-4 text-red-500" /> service@jameshannahauto.com</li>
+              <li className="flex gap-2"><Mail className="w-4 h-4 text-red-500" /> <span suppressHydrationWarning>service@jameshannahauto.com</span></li>
             </ul>
             <div className="mt-4 text-xs text-gray-500">
               <div className="font-semibold text-gray-300 mb-1">Financing Available</div>

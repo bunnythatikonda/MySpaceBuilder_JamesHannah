@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="bg-[#0a0a0a] text-white font-sans antialiased">
+      <body className="bg-[#0a0a0a] text-white font-sans antialiased" suppressHydrationWarning>
         {children}
         <Toaster theme="dark" position="top-right" richColors />
       </body>
