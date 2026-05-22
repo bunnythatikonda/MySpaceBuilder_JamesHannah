@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>James Hannah Auto Body &amp; Collision Center | Wichita, KS</title>
+<meta name="description" content="Wichita's premier auto body & collision repair center. Certified technicians, insurance approved, lifetime paint warranty. Book your free estimate today." />
+<meta name="keywords" content="auto body shop wichita, collision repair, paint repair, dent removal, insurance collision center, auto paint shop, james hannah auto body" />
+<meta property="og:title" content="James Hannah Auto Body & Collision Center" />
+<meta property="og:description" content="Precision Repairs. Trusted Craftsmanship. Certified collision repair in Wichita, KS." />
+<meta property="og:type" content="website" />
+
+<!-- Tailwind via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Bebas Neue"', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  .font-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: #ef4444; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 30px rgba(239, 68, 68, 0.4); } 50% { box-shadow: 0 0 60px rgba(239, 68, 68, 0.8); } }
+  @keyframes kenBurns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.15) translate(-2%, -1%); } }
+  @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+  .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+  .animate-pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
+  .animate-ken-burns { animation: kenBurns 20s ease-out infinite alternate; }
+  .animate-float { animation: float 3s ease-in-out infinite; }
+  .animate-blink { animation: blink 1.5s ease-in-out infinite; }
+
+  .delay-100 { animation-delay: 0.1s; opacity: 0; }
+  .delay-200 { animation-delay: 0.2s; opacity: 0; }
+  .delay-300 { animation-delay: 0.3s; opacity: 0; }
+  .delay-400 { animation-delay: 0.4s; opacity: 0; }
+  .delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+  .glass {
+    background: rgba(20, 20, 22, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .bg-carbon {
+    background-color: #0a0a0a;
+    background-image:
+      linear-gradient(135deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+      linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+      linear-gradient(315deg, rgba(255,255,255,0.02) 25%, transparent 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+  }
+  .bg-radial-fade { background: radial-gradient(ellipse at center, rgba(239,68,68,0.15) 0%, transparent 70%); }
+
+  .text-gradient-fire {
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 50%, #dc2626 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-fire {
+    background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+    background-size: 200% 200%;
+    transition: all 0.3s ease;
+    color: white;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .btn-fire:hover {
+    background-position: 100% 0;
+    box-shadow: 0 10px 30px -5px rgba(239, 68, 68, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+
+  .divider-fire {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(90deg, #ef4444, #f97316);
+    border-radius: 2px;
+  }
+
+  .input {
+    background: #1a1a1c;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.875rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .input:focus { border-color: #ef4444; }
+
+  /* Accordion */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chevron { transform: rotate(180deg); }
+  .chevron { transition: transform 0.3s; }
+
+  /* Hide scrollbar for carousel */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Lightbox */
+  .lightbox-img { max-width: 92vw; max-height: 92vh; }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #16a34a, #10b981);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+    animation: fadeInUp 0.4s ease-out;
+    max-width: 360px;
+  }
+
+  /* Reviews fade */
+  .review-slide { display: none; }
+  .review-slide.active { display: block; animation: fadeIn 0.7s ease-out; }
+
+  /* Masonry */
+  .masonry { column-count: 2; column-gap: 1rem; }
+  @media (min-width: 768px) { .masonry { column-count: 3; } }
+  @media (min-width: 1024px) { .masonry { column-count: 4; } }
+  .masonry > * { break-inside: avoid; margin-bottom: 1rem; }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3 group">
+      <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center shadow-lg shadow-red-500/30 group-hover:scale-110 transition-transform">
+        <i data-lucide="wrench" class="w-6 h-6 text-white"></i>
+      </div>
+      <div class="leading-tight">
+        <div class="font-display text-xl tracking-wide text-white">JAMES HANNAH</div>
+        <div class="text-[10px] uppercase tracking-[0.2em] text-red-400 font-semibold">Auto Body &amp; Collision</div>
+      </div>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-1">
+      <a href="#home" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Home</a>
+      <a href="#services" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Services</a>
+      <a href="#gallery" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Gallery</a>
+      <a href="#about" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">About</a>
+      <a href="#insurance" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Insurance</a>
+      <a href="#reviews" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Reviews</a>
+      <a href="#contact" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Contact</a>
+    </div>
+
+    <div class="hidden lg:flex items-center gap-3">
+      <a href="tel:+13165550142" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white">
+        <i data-lucide="phone" class="w-4 h-4 text-red-500"></i> (316) 555-0142
+      </a>
+      <a href="#estimate" class="btn-fire px-5 py-2.5 text-sm">Book Appointment <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+
+    <button id="mobileMenuBtn" class="lg:hidden p-2 text-white">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden lg:hidden glass mt-3 mx-4 rounded-xl p-4 space-y-2">
+    <a href="#home" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">Home</a>
+    <a href="#services" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">Services</a>
+    <a href="#gallery" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">Gallery</a>
+    <a href="#about" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">About</a>
+    <a href="#insurance" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">Insurance</a>
+    <a href="#reviews" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">Reviews</a>
+    <a href="#contact" class="block px-4 py-3 text-gray-200 hover:bg-white/5 rounded-lg">Contact</a>
+    <a href="#estimate" class="btn-fire w-full px-4 py-3 text-sm">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-24">
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 animate-ken-burns">
+      <img src="https://images.unsplash.com/photo-1512080482556-ea648017576c?auto=format&fit=crop&w=2000&q=80" alt="Auto body shop" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-radial-fade opacity-50"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 w-full">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 glass-light rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-blink"></span>
+        <span class="text-xs font-semibold tracking-widest uppercase text-gray-200">Wichita's #1 Rated Collision Center</span>
+      </div>
+
+      <h1 class="font-display text-5xl sm:text-7xl md:text-8xl text-white leading-[0.95] mb-6 animate-fade-in-up delay-100">
+        COLLISION REPAIR<br />
+        <span class="text-gradient-fire">DONE RIGHT.</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mb-3 animate-fade-in-up delay-200">Certified repairs. Insurance support. Flawless finishes.</p>
+      <p class="text-base text-gray-400 max-w-2xl mb-10 animate-fade-in-up delay-300">Precision repairs and trusted craftsmanship from Wichita's most decorated collision specialists since 2009.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up delay-400">
+        <a href="#estimate" class="btn-fire h-14 px-8 text-base animate-pulse-glow"><i data-lucide="calendar" class="w-5 h-5"></i> Book Appointment</a>
+        <a href="#estimate" class="h-14 px-8 text-base font-semibold bg-white/5 border border-white/20 text-white hover:bg-white hover:text-black backdrop-blur-md rounded-lg inline-flex items-center justify-center gap-2 transition">Get Free Estimate <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 animate-fade-in-up delay-500">
+        <div class="glass rounded-xl p-4 sm:p-5">
+          <div class="font-display text-3xl sm:text-4xl text-gradient-fire mb-1" data-counter="15" data-suffix="+">0+</div>
+          <div class="text-xs sm:text-sm text-gray-400 font-medium">Years Experience</div>
+        </div>
+        <div class="glass rounded-xl p-4 sm:p-5">
+          <div class="font-display text-3xl sm:text-4xl text-gradient-fire mb-1" data-counter="10000" data-suffix="+">0+</div>
+          <div class="text-xs sm:text-sm text-gray-400 font-medium">Repairs Completed</div>
+        </div>
+        <div class="glass rounded-xl p-4 sm:p-5">
+          <div class="font-display text-3xl sm:text-4xl text-gradient-fire mb-1" data-counter="100" data-suffix="%">0%</div>
+          <div class="text-xs sm:text-sm text-gray-400 font-medium">Insurance Approved</div>
+        </div>
+        <div class="glass rounded-xl p-4 sm:p-5">
+          <div class="font-display text-3xl sm:text-4xl text-gradient-fire mb-1">5★</div>
+          <div class="text-xs sm:text-sm text-gray-400 font-medium leading-tight">Lifetime Paint Warranty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float hidden md:flex flex-col items-center gap-2">
+    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-500">Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-red-500 to-transparent"></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="relative py-24 bg-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">What We Do</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">PREMIUM REPAIR SERVICES</h2>
+      <div class="divider-fire mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto text-gray-400">From minor dings to full collision rebuilds — every repair backed by our lifetime warranty.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ===== BEFORE / AFTER SLIDER ===== -->
+<section class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0f] to-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">The Transformation</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">BEFORE &amp; AFTER</h2>
+      <div class="divider-fire mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto text-gray-400">Drag the slider to see the difference our craftsmanship makes.</p>
+    </div>
+
+    <div id="baContainer" class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden cursor-ew-resize select-none shadow-2xl border border-white/10">
+      <img src="https://image.pollinations.ai/prompt/A%20black%20BMW%20luxury%20sedan%20fully%20repaired%20and%20pristine%2C%20glossy%20paint%20finish%2C%20parked%20in%20clean%20modern%20auto%20body%20shop%20with%20professional%20lighting%2C%20three-quarter%20front%20view%2C%20photorealistic%2C%20cinematic%2C%20showroom%20quality?width=1600&height=900&seed=42&nologo=true" class="absolute inset-0 w-full h-full object-cover" draggable="false" alt="After repair" />
+      <div class="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-md shadow-lg">After</div>
+
+      <div id="baBefore" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0)">
+        <img src="https://image.pollinations.ai/prompt/destroyed%20wrecked%20black%20BMW%20sedan%20after%20severe%20head-on%20collision%2C%20completely%20smashed%20front%20end%2C%20crumpled%20crushed%20hood%2C%20shattered%20headlights%2C%20broken%20grille%2C%20deployed%20airbags%2C%20debris%20scattered%2C%20totaled%20car%2C%20accident%20scene%20on%20wet%20street%2C%20photorealistic%2C%20dramatic%20overcast%20lighting?width=1600&height=900&seed=777&model=flux&nologo=true" class="w-full h-full object-cover" draggable="false" alt="Before repair" />
+        <div class="absolute top-4 left-4 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-md shadow-lg">Before</div>
+      </div>
+
+      <div id="baHandle" class="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_20px_rgba(255,255,255,0.8)] pointer-events-none" style="left: 50%; transform: translateX(-50%);"></div>
+      <div id="baKnob" class="absolute top-1/2 w-14 h-14 -mt-7 rounded-full bg-white shadow-2xl flex items-center justify-center pointer-events-none" style="left: 50%; transform: translateX(-50%);">
+        <i data-lucide="move-horizontal" class="w-6 h-6 text-black"></i>
+      </div>
+    </div>
+    <p class="text-center text-sm text-gray-500 mt-6">← Drag to compare →</p>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="relative py-24 bg-[#0a0a0a] bg-carbon">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Why James Hannah</span>
+        <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white leading-tight">REPAIRS YOU CAN <span class="text-gradient-fire">TRUST.</span></h2>
+        <div class="divider-fire mb-6"></div>
+        <p class="text-gray-400 mb-8 text-lg">For over 15 years, Wichita has trusted us with their luxury vehicles, fleet repairs, and post-accident peace of mind.</p>
+
+        <div class="grid sm:grid-cols-2 gap-5" id="whyGrid"></div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-6 bg-gradient-to-tr from-red-500/20 to-orange-500/20 rounded-3xl blur-3xl"></div>
+        <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&fit=crop&w=1400&q=80" alt="Facility" class="w-full h-[600px] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6">
+            <div class="glass rounded-xl p-5">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-white font-display text-2xl">JH</div>
+                <div>
+                  <div class="font-bold text-white">James Hannah</div>
+                  <div class="text-xs text-gray-400">Founder &amp; Lead Technician</div>
+                </div>
+                <i data-lucide="badge-check" class="w-6 h-6 text-red-500 ml-auto"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="relative py-24 bg-[#0a0a0a]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Customer Stories</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">WHAT OUR CUSTOMERS SAY</h2>
+      <div class="divider-fire mx-auto mb-6"></div>
+      <div class="flex items-center justify-center gap-2 text-gray-300">
+        <div class="flex">
+          <i data-lucide="star" class="w-5 h-5" style="fill: #facc15; color: #facc15;"></i>
+          <i data-lucide="star" class="w-5 h-5" style="fill: #facc15; color: #facc15;"></i>
+          <i data-lucide="star" class="w-5 h-5" style="fill: #facc15; color: #facc15;"></i>
+          <i data-lucide="star" class="w-5 h-5" style="fill: #facc15; color: #facc15;"></i>
+          <i data-lucide="star" class="w-5 h-5" style="fill: #facc15; color: #facc15;"></i>
+        </div>
+        <span class="font-semibold">4.9 / 5.0</span>
+        <span class="text-gray-500">— 847 verified reviews</span>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="glass rounded-3xl p-8 sm:p-12 relative">
+        <i data-lucide="quote" class="absolute top-6 left-6 w-16 h-16" style="color: rgba(239, 68, 68, 0.2);"></i>
+        <div id="reviewSlides" class="relative min-h-[220px]"></div>
+      </div>
+
+      <div class="flex items-center justify-center gap-3 mt-8">
+        <button id="reviewPrev" class="w-12 h-12 rounded-full glass hover:border-red-500 flex items-center justify-center transition">
+          <i data-lucide="chevron-left" class="w-5 h-5 text-white"></i>
+        </button>
+        <div id="reviewDots" class="flex gap-2"></div>
+        <button id="reviewNext" class="w-12 h-12 rounded-full glass hover:border-red-500 flex items-center justify-center transition">
+          <i data-lucide="chevron-right" class="w-5 h-5 text-white"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESTIMATE + BOOKING ===== -->
+<section id="estimate" class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#0e0e10] to-[#0a0a0a]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Get Started Today</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">SCHEDULE YOUR SERVICE</h2>
+      <div class="divider-fire mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto text-gray-400">Free estimate in 1 business hour, or book a confirmed appointment in seconds.</p>
+    </div>
+
+    <div class="grid grid-cols-2 max-w-md mx-auto mb-8 bg-[#141416] border border-white/10 h-14 p-1.5 rounded-lg">
+      <button data-tab="estimateForm" class="tab-btn active rounded-md font-semibold transition flex items-center justify-center gap-2 text-white">
+        <i data-lucide="camera" class="w-4 h-4"></i> Free Estimate
+      </button>
+      <button data-tab="bookingForm" class="tab-btn rounded-md font-semibold transition flex items-center justify-center gap-2 text-gray-400">
+        <i data-lucide="calendar" class="w-4 h-4"></i> Book Appointment
+      </button>
+    </div>
+
+    <!-- ESTIMATE FORM -->
+    <div id="estimateForm" class="tab-content glass rounded-2xl p-6 sm:p-10">
+      <form onsubmit="handleEstimate(event)" class="grid sm:grid-cols-2 gap-5">
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Full Name *</label>
+          <input required name="name" placeholder="John Smith" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Phone *</label>
+          <input required name="phone" type="tel" placeholder="(316) 555-0123" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Email *</label>
+          <input required name="email" type="email" placeholder="john@email.com" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Vehicle (Year / Make / Model) *</label>
+          <input required name="vehicle" placeholder="2021 Tesla Model 3" class="input h-12" />
+        </div>
+        <div class="space-y-2 sm:col-span-2">
+          <label class="text-gray-300 text-sm">Damage Description *</label>
+          <textarea required name="description" rows="4" placeholder="Rear bumper damage from parking incident, paint scuffed and cracked..." class="input"></textarea>
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Preferred Date</label>
+          <input name="preferredDate" type="date" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Upload Damage Photos</label>
+          <label class="cursor-pointer flex items-center gap-2 input h-12 hover:border-red-500/50">
+            <i data-lucide="upload" class="w-4 h-4 text-red-500"></i>
+            <span class="text-sm text-gray-400">Choose photos...</span>
+            <input type="file" accept="image/*" multiple class="hidden" />
+          </label>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="btn-fire w-full h-14 text-base">Send My Free Estimate <i data-lucide="send" class="w-4 h-4"></i></button>
+          <p class="text-xs text-gray-500 text-center mt-3 flex items-center justify-center gap-1.5">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Response within 1 business hour. Zero obligation.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div id="bookingForm" class="tab-content glass rounded-2xl p-6 sm:p-10 hidden">
+      <form onsubmit="handleBooking(event)" class="grid sm:grid-cols-2 gap-5">
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Full Name *</label>
+          <input required name="name" placeholder="John Smith" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Phone *</label>
+          <input required name="phone" type="tel" placeholder="(316) 555-0123" class="input h-12" />
+        </div>
+        <div class="space-y-2 sm:col-span-2">
+          <label class="text-gray-300 text-sm">Email *</label>
+          <input required name="email" type="email" placeholder="john@email.com" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Service Type *</label>
+          <select required name="service" class="input h-12">
+            <option value="">Select service</option>
+            <option>Collision Repair</option>
+            <option>Paint Matching</option>
+            <option>Dent Removal</option>
+            <option>Frame Straightening</option>
+            <option>Bumper Repair</option>
+            <option>Scratch Removal</option>
+            <option>Insurance Claims</option>
+            <option>Ceramic Coating</option>
+            <option>Fleet Services</option>
+            <option>Glass Replacement</option>
+          </select>
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Vehicle *</label>
+          <input required name="vehicle" placeholder="2021 Tesla Model 3" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Preferred Date *</label>
+          <input required name="date" type="date" class="input h-12" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-gray-300 text-sm">Preferred Time *</label>
+          <select required name="time" class="input h-12">
+            <option value="">Select time</option>
+            <option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option>
+            <option>11:00 AM</option><option>1:00 PM</option><option>2:00 PM</option>
+            <option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option>
+          </select>
+        </div>
+        <div class="space-y-2 sm:col-span-2">
+          <label class="text-gray-300 text-sm">Additional Notes</label>
+          <textarea name="notes" rows="3" placeholder="Anything we should know..." class="input"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="btn-fire w-full h-14 text-base">Confirm Appointment <i data-lucide="check-circle-2" class="w-4 h-4"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="relative py-24 bg-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Our Work</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">REPAIR GALLERY</h2>
+      <div class="divider-fire mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto text-gray-400">A selection of recent collision repairs, restorations and paint work.</p>
+    </div>
+    <div class="masonry" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ===== INSURANCE ===== -->
+<section id="insurance" class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#0e0e10] to-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Insurance Claims</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">WE WORK WITH ALL <span class="text-gradient-fire">MAJOR INSURERS</span></h2>
+      <div class="divider-fire mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto text-gray-400">We handle the paperwork, the negotiations, and the rental coordination. You just bring us the keys.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6 mb-16" id="insuranceSteps"></div>
+
+    <div class="flex flex-wrap items-center justify-center gap-4" id="insuranceLogos"></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="relative py-24 bg-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+      <div class="grid grid-cols-2 gap-4">
+        <img src="https://images.pexels.com/photos/4489758/pexels-photo-4489758.jpeg?auto=compress&w=600" alt="" class="rounded-xl border border-white/10 w-full h-80 object-cover" />
+        <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&w=600&q=80" alt="" class="rounded-xl border border-white/10 w-full h-80 object-cover mt-8" />
+      </div>
+      <div>
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Our Story</span>
+        <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">15 YEARS OF <span class="text-gradient-fire">PRECISION.</span></h2>
+        <div class="divider-fire mb-6"></div>
+        <p class="text-gray-300 mb-4 leading-relaxed">James Hannah opened the doors of his Wichita shop in 2009 with a single Snap-On toolbox, a downdraft paint booth, and one stubborn promise: <span class="text-white font-semibold">no shortcuts, no cheap parts, no compromises.</span></p>
+        <p class="text-gray-400 mb-6 leading-relaxed">Today, we're a 14,000 sq ft I-CAR Gold Class certified facility — the highest training tier in the collision industry. We've repaired everything from family minivans to six-figure exotics.</p>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          <div class="flex items-center gap-3 glass rounded-lg p-3"><i data-lucide="award" class="w-5 h-5 text-red-500"></i><span class="text-sm font-semibold text-white">I-CAR Gold Class</span></div>
+          <div class="flex items-center gap-3 glass rounded-lg p-3"><i data-lucide="badge-check" class="w-5 h-5 text-red-500"></i><span class="text-sm font-semibold text-white">ASE Master Certified</span></div>
+          <div class="flex items-center gap-3 glass rounded-lg p-3"><i data-lucide="zap" class="w-5 h-5 text-red-500"></i><span class="text-sm font-semibold text-white">Tesla Approved</span></div>
+          <div class="flex items-center gap-3 glass rounded-lg p-3"><i data-lucide="shield-check" class="w-5 h-5 text-red-500"></i><span class="text-sm font-semibold text-white">BBB A+ Rated</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <h3 class="font-display text-3xl text-white text-center mb-12">OUR JOURNEY</h3>
+    <div class="relative max-w-4xl mx-auto" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0f] to-[#0a0a0a]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">FAQ</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">FREQUENTLY ASKED</h2>
+      <div class="divider-fire mx-auto"></div>
+    </div>
+    <div class="space-y-3" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="relative py-24 bg-[#0a0a0a]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-red-500">Get In Touch</span>
+      <h2 class="font-display text-5xl sm:text-6xl mt-3 mb-4 text-white">VISIT OUR SHOP</h2>
+      <div class="divider-fire mx-auto"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div class="glass rounded-2xl p-8">
+        <h3 class="font-display text-3xl text-white mb-6">CONTACT INFO</h3>
+        <div class="space-y-5">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center"><i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i></div>
+            <div><div class="text-xs uppercase tracking-widest text-gray-500 mb-1">Visit Us</div><div class="text-white">2418 S Seneca St<br />Wichita, KS 67213</div></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5 text-red-500"></i></div>
+            <div><div class="text-xs uppercase tracking-widest text-gray-500 mb-1">Call Us</div><div class="text-white">(316) 555-0142<br />24/7 Emergency Towing</div></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5 text-red-500"></i></div>
+            <div><div class="text-xs uppercase tracking-widest text-gray-500 mb-1">Email</div><div class="text-white">service@jameshannahauto.com</div></div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center"><i data-lucide="clock" class="w-5 h-5 text-red-500"></i></div>
+            <div><div class="text-xs uppercase tracking-widest text-gray-500 mb-1">Hours</div><div class="text-white">Mon-Fri: 8:00 AM - 6:00 PM<br />Sat: 9:00 AM - 2:00 PM<br />Sun: Closed</div></div>
+          </div>
+        </div>
+
+        <form onsubmit="handleContact(event)" class="mt-8 pt-8 border-t border-white/10 space-y-3">
+          <h4 class="font-bold text-white mb-3">Send Us a Message</h4>
+          <div class="grid grid-cols-2 gap-3">
+            <input required name="name" placeholder="Name" class="input h-11" />
+            <input required name="email" type="email" placeholder="Email" class="input h-11" />
+          </div>
+          <input name="phone" placeholder="Phone (optional)" class="input h-11" />
+          <textarea required name="message" rows="3" placeholder="How can we help?" class="input"></textarea>
+          <button type="submit" class="btn-fire w-full h-12">Send Message <i data-lucide="send" class="w-4 h-4"></i></button>
+        </form>
+      </div>
+
+      <div class="relative rounded-2xl overflow-hidden border border-white/10 min-h-[600px]">
+        <iframe title="map" src="https://www.google.com/maps?q=Wichita+Kansas+auto+body&output=embed" class="w-full h-full absolute inset-0" style="filter: grayscale(40%) contrast(1.1);" loading="lazy"></iframe>
+        <div class="absolute bottom-6 left-6 right-6 glass rounded-xl p-5">
+          <div class="flex items-center justify-between gap-3 flex-wrap">
+            <div>
+              <div class="text-xs uppercase tracking-widest text-red-500 font-semibold mb-1">Need Emergency Towing?</div>
+              <div class="text-white font-bold">24/7 Available</div>
+            </div>
+            <a href="tel:+13165550142" class="btn-fire px-5 py-3"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="relative bg-black border-t border-white/5 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center"><i data-lucide="wrench" class="w-6 h-6 text-white"></i></div>
+          <div>
+            <div class="font-display text-xl text-white">JAMES HANNAH</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-red-400 font-semibold">Auto Body &amp; Collision</div>
+          </div>
+        </div>
+        <p class="text-gray-400 max-w-md mb-6">Wichita's most trusted collision repair center since 2009. Precision repairs. Trusted craftsmanship. Lifetime warranty.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 rounded-lg glass flex items-center justify-center hover:border-red-500 transition"><i data-lucide="facebook" class="w-4 h-4 text-gray-400"></i></a>
+          <a href="#" class="w-10 h-10 rounded-lg glass flex items-center justify-center hover:border-red-500 transition"><i data-lucide="instagram" class="w-4 h-4 text-gray-400"></i></a>
+          <a href="#" class="w-10 h-10 rounded-lg glass flex items-center justify-center hover:border-red-500 transition"><i data-lucide="youtube" class="w-4 h-4 text-gray-400"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="#services" class="hover:text-red-500">Services</a></li>
+          <li><a href="#gallery" class="hover:text-red-500">Gallery</a></li>
+          <li><a href="#about" class="hover:text-red-500">About</a></li>
+          <li><a href="#insurance" class="hover:text-red-500">Insurance</a></li>
+          <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+          <li><a href="#faq" class="hover:text-red-500">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-4 uppercase text-sm tracking-wider">Contact</h4>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5"></i> 2418 S Seneca St, Wichita, KS 67213</li>
+          <li class="flex gap-2"><i data-lucide="phone" class="w-4 h-4 text-red-500"></i> (316) 555-0142</li>
+          <li class="flex gap-2"><i data-lucide="mail" class="w-4 h-4 text-red-500"></i> service@jameshannahauto.com</li>
+        </ul>
+        <div class="mt-4 text-xs text-gray-500">
+          <div class="font-semibold text-gray-300 mb-1">Financing Available</div>
+          0% APR for 12 months on qualified repairs
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+      <div>© <span id="year"></span> James Hannah Auto Body &amp; Collision Center. All rights reserved.</div>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-red-500">Privacy Policy</a>
+        <a href="#" class="hover:text-red-500">Terms</a>
+        <a href="#" class="hover:text-red-500">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING ACTIONS ===== -->
+<div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+  <a href="tel:+13165550142" class="w-14 h-14 rounded-full btn-fire shadow-2xl shadow-red-500/40 animate-pulse-glow" style="padding: 0; display: inline-flex;">
+    <i data-lucide="phone" class="w-6 h-6 m-auto"></i>
+  </a>
+  <button id="chatToggle" class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-2xl shadow-blue-500/40 flex items-center justify-center hover:scale-110 transition">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </button>
+</div>
+
+<!-- Chat widget -->
+<div id="chatWidget" class="fixed bottom-28 right-6 z-40 w-80 glass rounded-2xl shadow-2xl overflow-hidden hidden">
+  <div class="bg-gradient-to-r from-blue-500 to-cyan-500 p-4 flex items-center justify-between">
+    <div>
+      <div class="font-bold text-white">Live Chat</div>
+      <div class="text-xs text-white/80 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-green-400 animate-blink"></span> We're online</div>
+    </div>
+    <button onclick="document.getElementById('chatWidget').classList.add('hidden')"><i data-lucide="x" class="w-5 h-5 text-white"></i></button>
+  </div>
+  <div class="p-4 h-64 overflow-y-auto bg-[#0a0a0a]">
+    <div class="flex gap-2 mb-3">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-br from-red-500 to-orange-500 flex-shrink-0 flex items-center justify-center text-white text-xs font-bold">JH</div>
+      <div class="glass rounded-xl rounded-tl-none px-3 py-2 text-sm text-white max-w-[80%]">Hi! 👋 Need a quote, want to schedule a repair, or have a question about your insurance claim?</div>
+    </div>
+  </div>
+  <div class="p-3 border-t border-white/10 bg-[#0a0a0a]">
+    <div class="flex gap-2">
+      <input placeholder="Type a message..." class="input h-10 text-sm" />
+      <button class="btn-fire h-10 px-3"><i data-lucide="send" class="w-4 h-4"></i></button>
+    </div>
+    <div class="text-[10px] text-gray-500 mt-2 text-center">Or call us at <a href="tel:+13165550142" class="text-red-500">(316) 555-0142</a></div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4">
+  <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-red-500"><i data-lucide="x" class="w-8 h-8"></i></button>
+  <img id="lightboxImg" src="" alt="" class="lightbox-img rounded-xl" />
+</div>
+
+<script>
+/* ====== DATA ====== */
+const SERVICES = [
+  { icon: 'car', title: 'Collision Repair', desc: 'Full-service collision damage repair restoring your vehicle to pre-accident condition.', img: 'https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=900&q=80' },
+  { icon: 'paint-bucket', title: 'Paint Matching', desc: 'Computerized color matching for a flawless OEM-quality factory finish.', img: 'https://images.unsplash.com/photo-1632823639409-ce060d5a54cc?auto=format&fit=crop&w=900&q=80' },
+  { icon: 'hammer', title: 'Dent Removal', desc: 'Paintless dent repair (PDR) for door dings, hail damage and minor dents.', img: 'https://images.pexels.com/photos/6870314/pexels-photo-6870314.jpeg?auto=compress&w=900' },
+  { icon: 'wrench', title: 'Frame Straightening', desc: 'Laser-measured frame and unibody straightening on certified racks.', img: 'https://images.unsplash.com/photo-1635691035955-2763da0d6f19?auto=format&fit=crop&w=900&q=80' },
+  { icon: 'square', title: 'Bumper Repair', desc: 'Cracked, scuffed or torn bumpers repaired or replaced quickly.', img: 'https://images.unsplash.com/photo-1674632917668-6237bad1347d?auto=format&fit=crop&w=900&q=80' },
+  { icon: 'sparkles', title: 'Scratch Removal', desc: 'Multi-stage paint correction & polishing to eliminate scratches and swirls.', img: 'https://images.pexels.com/photos/14231684/pexels-photo-14231684.jpeg?auto=compress&w=900' },
+  { icon: 'file-check', title: 'Insurance Claims', desc: 'We handle the entire claims process with all major insurance providers.', img: 'https://images.pexels.com/photos/14231701/pexels-photo-14231701.jpeg?auto=compress&w=900' },
+  { icon: 'gem', title: 'Ceramic Coating', desc: 'Long-lasting ceramic protection for hydrophobic, scratch-resistant shine.', img: 'https://images.unsplash.com/photo-1727893304219-063d142ce6f3?auto=format&fit=crop&w=900&q=80' },
+  { icon: 'truck', title: 'Fleet Services', desc: 'Priority scheduling, volume pricing & dedicated service for fleet operators.', img: 'https://images.unsplash.com/photo-1580679568899-be51739ba2df?auto=format&fit=crop&w=900&q=80' },
+  { icon: 'shield-check', title: 'Glass Replacement', desc: 'Windshield & auto glass replacement with OEM-grade materials.', img: 'https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?auto=format&fit=crop&w=900&q=80' },
+];
+
+const WHY = [
+  { icon: 'shield-check', title: 'Insurance Assistance', desc: 'Direct billing with every major carrier. Zero paperwork stress.' },
+  { icon: 'award', title: 'Certified Technicians', desc: 'I-CAR Gold Class & ASE Master certified body specialists.' },
+  { icon: 'badge-check', title: 'OEM Quality Repairs', desc: 'Only manufacturer-approved parts and repair procedures.' },
+  { icon: 'zap', title: 'Fast Turnaround', desc: 'Most repairs completed in 3-7 days with real-time text updates.' },
+  { icon: 'trophy', title: 'Lifetime Warranty', desc: 'Every paint and body repair backed by a written lifetime warranty.' },
+  { icon: 'sparkles', title: 'State-of-the-Art', desc: 'Downdraft paint booths, computerized frame racks, laser measuring.' },
+];
+
+const REVIEWS = [
+  { name: 'Sarah Mitchell', role: 'Verified Customer', avatar: 'https://i.pravatar.cc/120?img=47', rating: 5, text: "After a bad rear-end collision on Kellogg, James Hannah's team made my Lexus look brand new. They handled my entire State Farm claim and even arranged a rental. Six weeks later — paint match is perfect, no orange peel, nothing." },
+  { name: 'Marcus Reynolds', role: 'Fleet Manager', avatar: 'https://i.pravatar.cc/120?img=33', rating: 5, text: 'We run 24 service vans across Wichita. James Hannah keeps every one of them on the road. Their fleet pricing is fair, communication is constant, and the work is consistent. Best shop in Sedgwick County, hands down.' },
+  { name: 'Jennifer Lopez', role: 'Verified Customer', avatar: 'https://i.pravatar.cc/120?img=44', rating: 5, text: 'Hail-damaged my new Tesla Model Y. I was sick about it. The paintless dent repair team got it back to factory condition in 4 days. Insurance covered everything. I cannot recommend these guys enough.' },
+  { name: 'David Chen', role: 'Verified Customer', avatar: 'https://i.pravatar.cc/120?img=12', rating: 5, text: 'They restored my 1968 Camaro from a frame-off respray. Three months of work, museum-quality finish. James personally walked me through every stage. This is craftsmanship you can\'t find anymore.' },
+  { name: 'Amanda Foster', role: 'Verified Customer', avatar: 'https://i.pravatar.cc/120?img=20', rating: 5, text: 'Hit a deer on K-96. Frame damage, airbags deployed, looked totaled. James Hannah negotiated with my insurance, repaired structural damage, and saved the car. Drives perfectly straight. True professionals.' },
+];
+
+const FAQS = [
+  { q: 'Do you work with my insurance company?', a: 'Yes. We are a direct repair facility for all major insurers including State Farm, Geico, Progressive, Allstate, USAA, Farmers, Liberty Mutual and more. We handle the entire claim from estimate to final payment.' },
+  { q: 'How long will my repair take?', a: 'Most collision repairs are completed in 3-7 business days. Larger structural repairs may take 2-3 weeks. We provide real-time text updates and an accurate completion date after teardown.' },
+  { q: 'Do you provide a warranty?', a: 'Absolutely. Every paint and body repair we perform is backed by a written limited lifetime warranty for as long as you own the vehicle.' },
+  { q: "Will my repair affect my car's value?", a: 'When repaired properly with OEM parts and certified procedures — which is what we do — your vehicle retains its full market value.' },
+  { q: 'Do you offer free estimates?', a: 'Yes — free, no-obligation written estimates in-shop or via our online photo estimate tool.' },
+  { q: 'Can I bring my luxury or exotic vehicle?', a: 'Yes. We are certified to repair Tesla, BMW, Audi, Mercedes-Benz, Porsche, Lexus and most other luxury brands using factory-approved procedures, parts and paint.' },
+  { q: 'Do you provide rental cars or towing?', a: 'We coordinate rental cars with Enterprise directly through your insurance, and we offer 24/7 emergency towing throughout the Wichita metro.' },
+];
+
+const INSURANCE_STEPS = [
+  { n: '01', title: 'File Your Claim', desc: 'Call your insurance and mention James Hannah Auto Body.' },
+  { n: '02', title: 'Bring Us The Car', desc: 'Drop off or schedule a free tow. We take it from there.' },
+  { n: '03', title: 'We Handle Everything', desc: 'Estimate, supplements, negotiations, rental — all of it.' },
+  { n: '04', title: 'Drive Away New', desc: 'Lifetime warranty. Spotless finish. Total peace of mind.' },
+];
+const INSURANCE = ['State Farm', 'Geico', 'Progressive', 'Allstate', 'USAA', 'Farmers', 'Liberty Mutual', 'Nationwide', 'Travelers', 'American Family'];
+
+const TIMELINE = [
+  { year: '2009', title: 'Founded', desc: 'James Hannah opens a 2-bay shop on Seneca Street.' },
+  { year: '2014', title: 'I-CAR Certified', desc: 'Achieved Gold Class — top 10% of collision shops nationally.' },
+  { year: '2018', title: 'Facility Expansion', desc: 'Moved to 14,000 sq ft state-of-the-art collision center.' },
+  { year: '2021', title: 'Tesla Approved', desc: 'Became an approved EV collision repair facility.' },
+  { year: '2024', title: '10,000th Repair', desc: 'Celebrated 10,000+ vehicles returned to the road.' },
+];
+
+const GALLERY_IMAGES = [
+  'https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1601929862217-f1bf94503333?auto=format&fit=crop&w=1200&q=80',
+  'https://images.pexels.com/photos/32897253/pexels-photo-32897253.jpeg?auto=compress&w=1200',
+  'https://images.pexels.com/photos/30893737/pexels-photo-30893737.jpeg?auto=compress&w=1200',
+  'https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1632823639409-ce060d5a54cc?auto=format&fit=crop&w=900&q=80',
+  'https://images.pexels.com/photos/6870314/pexels-photo-6870314.jpeg?auto=compress&w=900',
+  'https://images.unsplash.com/photo-1635691035955-2763da0d6f19?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1674632917668-6237bad1347d?auto=format&fit=crop&w=900&q=80',
+  'https://images.pexels.com/photos/14231684/pexels-photo-14231684.jpeg?auto=compress&w=900',
+];
+
+/* ====== RENDER ====== */
+function renderServices() {
+  document.getElementById('servicesGrid').innerHTML = SERVICES.map(s => `
+    <div class="card-hover group relative overflow-hidden rounded-2xl bg-[#141416] border border-white/5">
+      <div class="relative h-44 overflow-hidden">
+        <img src="${s.img}" alt="${s.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#141416] via-[#141416]/40 to-transparent"></div>
+        <div class="absolute top-3 left-3 w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center shadow-xl">
+          <i data-lucide="${s.icon}" class="w-6 h-6 text-white"></i>
+        </div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-bold text-lg text-white mb-2 group-hover:text-red-400 transition-colors">${s.title}</h3>
+        <p class="text-sm text-gray-400 leading-relaxed mb-4">${s.desc}</p>
+        <button class="text-xs font-bold uppercase tracking-wider text-red-500 hover:text-orange-400 inline-flex items-center gap-1">Learn More <i data-lucide="chevron-right" class="w-3 h-3"></i></button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderWhy() {
+  document.getElementById('whyGrid').innerHTML = WHY.map(w => `
+    <div class="flex gap-4 group">
+      <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+        <i data-lucide="${w.icon}" class="w-5 h-5 text-red-500"></i>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-1">${w.title}</h4>
+        <p class="text-sm text-gray-400 leading-relaxed">${w.desc}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+let currentReview = 0;
+function renderReviews() {
+  document.getElementById('reviewSlides').innerHTML = REVIEWS.map((r, i) => `
+    <div class="review-slide ${i === 0 ? 'active' : ''}" data-idx="${i}">
+      <div class="flex mb-4">${Array(r.rating).fill('<i data-lucide="star" class="w-5 h-5" style="fill:#facc15;color:#facc15;"></i>').join('')}</div>
+      <p class="text-lg sm:text-xl text-gray-200 leading-relaxed mb-6 italic">"${r.text}"</p>
+      <div class="flex items-center gap-4">
+        <img src="${r.avatar}" alt="${r.name}" class="w-14 h-14 rounded-full object-cover border-2 border-red-500/50" />
+        <div>
+          <div class="flex items-center gap-2"><span class="font-bold text-white">${r.name}</span><i data-lucide="badge-check" class="w-4 h-4 text-red-500"></i></div>
+          <div class="text-sm text-gray-400">${r.role}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('reviewDots').innerHTML = REVIEWS.map((_, i) =>
+    `<button data-idx="${i}" class="review-dot h-1.5 rounded-full transition-all ${i === 0 ? 'w-10 bg-gradient-to-r from-red-500 to-orange-500' : 'w-2 bg-white/20'}"></button>`
+  ).join('');
+}
+function showReview(i) {
+  currentReview = (i + REVIEWS.length) % REVIEWS.length;
+  document.querySelectorAll('.review-slide').forEach((el, idx) => el.classList.toggle('active', idx === currentReview));
+  document.querySelectorAll('.review-dot').forEach((el, idx) => {
+    el.className = `review-dot h-1.5 rounded-full transition-all ${idx === currentReview ? 'w-10 bg-gradient-to-r from-red-500 to-orange-500' : 'w-2 bg-white/20'}`;
+  });
+}
+
+function renderInsurance() {
+  document.getElementById('insuranceSteps').innerHTML = INSURANCE_STEPS.map(s => `
+    <div class="relative glass rounded-2xl p-6 hover:border-red-500/40 transition-all">
+      <div class="font-display text-6xl text-gradient-fire opacity-30 mb-2">${s.n}</div>
+      <h3 class="font-bold text-white text-lg mb-2">${s.title}</h3>
+      <p class="text-sm text-gray-400">${s.desc}</p>
+    </div>
+  `).join('');
+  document.getElementById('insuranceLogos').innerHTML = INSURANCE.map(name => `
+    <div class="glass rounded-lg px-6 py-4 hover:border-red-500/40 hover:scale-105 transition-all"><span class="font-semibold text-gray-300 text-sm">${name}</span></div>
+  `).join('');
+}
+
+function renderTimeline() {
+  document.getElementById('timeline').innerHTML = `
+    <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-500 via-orange-500 to-transparent"></div>
+    ${TIMELINE.map((t, i) => `
+      <div class="relative flex items-center gap-6 mb-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}">
+        <div class="hidden md:block flex-1"></div>
+        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-red-500 to-orange-500 ring-4 ring-[#0a0a0a]"></div>
+        <div class="flex-1 ml-12 md:ml-0">
+          <div class="glass rounded-xl p-5">
+            <div class="font-display text-3xl text-gradient-fire mb-1">${t.year}</div>
+            <div class="font-bold text-white mb-1">${t.title}</div>
+            <div class="text-sm text-gray-400">${t.desc}</div>
+          </div>
+        </div>
+      </div>
+    `).join('')}
+  `;
+}
+
+function renderFAQ() {
+  document.getElementById('faqList').innerHTML = FAQS.map(f => `
+    <details class="glass border-white/10 rounded-xl px-6">
+      <summary class="text-white font-semibold py-5 flex items-center justify-between gap-4">
+        <span>${f.q}</span>
+        <i data-lucide="chevron-down" class="w-5 h-5 chevron flex-shrink-0"></i>
+      </summary>
+      <div class="text-gray-400 leading-relaxed pb-5">${f.a}</div>
+    </details>
+  `).join('');
+}
+
+function renderGallery() {
+  document.getElementById('galleryGrid').innerHTML = GALLERY_IMAGES.map(src => `
+    <div onclick="openLightbox('${src}')" class="group relative overflow-hidden rounded-xl border border-white/5 cursor-pointer">
+      <img src="${src}" alt="" loading="lazy" class="w-full h-auto transition-transform duration-700 group-hover:scale-110" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+        <span class="text-white text-sm font-semibold">View Larger →</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ====== INTERACTIONS ====== */
+function animateCounters() {
+  document.querySelectorAll('[data-counter]').forEach(el => {
+    const end = parseInt(el.dataset.counter);
+    const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const start = Date.now();
+          const step = () => {
+            const elapsed = Date.now() - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const val = Math.floor(end * eased);
+            el.textContent = (val >= 1000 ? val.toLocaleString() : val) + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = (end >= 1000 ? end.toLocaleString() : end) + suffix;
+          };
+          requestAnimationFrame(step);
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(el);
+  });
+}
+
+function initNavbar() {
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      nav.classList.remove('bg-transparent', 'py-5');
+      nav.classList.add('glass', 'shadow-2xl', 'py-3');
+    } else {
+      nav.classList.add('bg-transparent', 'py-5');
+      nav.classList.remove('glass', 'shadow-2xl', 'py-3');
+    }
+  });
+
+  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('hidden');
+  }));
+}
+
+function initBeforeAfter() {
+  const container = document.getElementById('baContainer');
+  const before = document.getElementById('baBefore');
+  const handle = document.getElementById('baHandle');
+  const knob = document.getElementById('baKnob');
+  let dragging = false;
+
+  const setPos = (clientX) => {
+    const rect = container.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    before.style.clipPath = `inset(0 ${100 - x}% 0 0)`;
+    handle.style.left = `${x}%`;
+    knob.style.left = `${x}%`;
+  };
+
+  container.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
+  container.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); });
+  window.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+  window.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); });
+  window.addEventListener('mouseup', () => dragging = false);
+  window.addEventListener('touchend', () => dragging = false);
+}
+
+function initReviews() {
+  document.getElementById('reviewPrev').addEventListener('click', () => showReview(currentReview - 1));
+  document.getElementById('reviewNext').addEventListener('click', () => showReview(currentReview + 1));
+  document.querySelectorAll('.review-dot').forEach(el => {
+    el.addEventListener('click', () => showReview(parseInt(el.dataset.idx)));
+  });
+  setInterval(() => showReview(currentReview + 1), 7000);
+}
+
+function initTabs() {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '';
+        b.classList.add('text-gray-400');
+        b.classList.remove('text-white');
+      });
+      btn.classList.add('active', 'text-white');
+      btn.classList.remove('text-gray-400');
+      btn.style.background = 'linear-gradient(135deg, #ef4444 0%, #f97316 100%)';
+
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+      document.getElementById(btn.dataset.tab).classList.remove('hidden');
+    });
+  });
+  // Set initial active tab style
+  const active = document.querySelector('.tab-btn.active');
+  if (active) active.style.background = 'linear-gradient(135deg, #ef4444 0%, #f97316 100%)';
+}
+
+function initChat() {
+  document.getElementById('chatToggle').addEventListener('click', () => {
+    document.getElementById('chatWidget').classList.toggle('hidden');
+  });
+}
+
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.remove('hidden');
+  document.getElementById('lightbox').classList.add('flex');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+  document.getElementById('lightbox').classList.remove('flex');
+}
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target.id === 'lightbox') closeLightbox();
+});
+
+function toast(message, type) {
+  const t = document.createElement('div');
+  t.className = 'toast';
+  if (type === 'error') t.style.background = 'linear-gradient(135deg, #dc2626, #ef4444)';
+  t.innerHTML = message;
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.transition = 'opacity 0.3s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 4000);
+}
+
+function getFormData(form) {
+  const data = {};
+  new FormData(form).forEach((v, k) => data[k] = v);
+  return data;
+}
+
+function handleEstimate(e) {
+  e.preventDefault();
+  const data = getFormData(e.target);
+  console.log('Estimate submission:', data);
+  toast(`✓ Thanks ${data.name}! Your estimate request was received. We'll contact you within 1 business hour.`);
+  e.target.reset();
+}
+function handleBooking(e) {
+  e.preventDefault();
+  const data = getFormData(e.target);
+  const code = 'JH-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+  console.log('Booking submission:', data, 'Code:', code);
+  toast(`✓ Appointment confirmed! Confirmation code: <strong>${code}</strong>`);
+  e.target.reset();
+}
+function handleContact(e) {
+  e.preventDefault();
+  const data = getFormData(e.target);
+  console.log('Contact submission:', data);
+  toast(`✓ Message sent! We'll reply soon.`);
+  e.target.reset();
+}
+
+/* ====== INIT ====== */
+document.addEventListener('DOMContentLoaded', () => {
+  renderServices();
+  renderWhy();
+  renderReviews();
+  renderInsurance();
+  renderTimeline();
+  renderFAQ();
+  renderGallery();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelector('#bookingForm input[name=date]')?.setAttribute('min', new Date().toISOString().split('T')[0]);
+  document.querySelector('#estimateForm input[name=preferredDate]')?.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+  lucide.createIcons();
+
+  initNavbar();
+  initBeforeAfter();
+  initReviews();
+  initTabs();
+  initChat();
+  animateCounters();
+});
+</script>
+</body>
+</html>
